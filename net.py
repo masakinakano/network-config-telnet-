@@ -1,9 +1,9 @@
 
 import telnetlib
 
-HOST = "192.168.0.254"
+HOST = "ホストのアドレス"
 
-password = "masaki"
+password = "パスワード"
 
 tn = telnetlib.Telnet(HOST)##実際にtelnet通信の開始
 
@@ -13,7 +13,7 @@ tn.write(password.encode('ascii') + b"\n")##password変数の中身をアスキ�
 
 
 tn.write(b"enable\n")
-tn.write(b"masaki\n")
+tn.write(b"パスワード\n")
 tn.write(b"show run\n")
 tn.write(b"exit\n")
 
